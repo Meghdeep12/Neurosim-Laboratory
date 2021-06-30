@@ -15,7 +15,7 @@ dend.insert('hh')
 
 dend.connect(soma)
 
-syn = h.Exp2Syn(soma(0.3))
+syn = h.Exp2Syn(soma(0.5))
 syn.tau1 = 0
 syn.tau2 = 0
 syn.e = 0
