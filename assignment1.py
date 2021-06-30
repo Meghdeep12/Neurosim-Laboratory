@@ -16,9 +16,9 @@ dend.insert('hh')
 dend.connect(soma)
 
 syn = h.Exp2Syn(soma(0.5))
-syn.tau1 = 0
-syn.tau2 = 0
-syn.e = 0
+syn.tau1 = 1
+syn.tau2 = 2
+syn.e = 40
 
 s= h.NetStim()
 s.number = 2
