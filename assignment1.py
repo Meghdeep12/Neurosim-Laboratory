@@ -17,16 +17,16 @@ dend.connect(soma)
 
 syn = h.Exp2Syn(soma(0.5))
 syn.tau1 = 1
-syn.tau2 = 2
-syn.e = 40
+syn.tau2 = 5
+syn.e = 0
 
 s= h.NetStim()
 s.number = 2
-s.start = 0
+s.start = 1
 
 nc = h.NetCon(s, syn)
-nc.delay = 1 * ms
-nc.weight[0] = 0.04
+nc.delay = 2 * ms
+nc.weight[0] = 0.0034
 
 v = h.Vector().record(soma(0.5)._ref_v)          
 t = h.Vector().record(h._ref_t)   
