@@ -26,7 +26,7 @@ s.start = 1
 
 nc = h.NetCon(s, syn)
 nc.delay = 2 * ms
-nc.weight[0] = 0.0034
+nc.weight[0] = 0.028
 
 v = h.Vector().record(soma(0.5)._ref_v)          
 t = h.Vector().record(h._ref_t)   
