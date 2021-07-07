@@ -15,18 +15,29 @@ dend.insert('hh')
 
 dend.connect(soma)
 
-syn = h.Exp2Syn(soma(0.5))
-syn.tau1 = 1
-syn.tau2 = 5
-syn.e = 0
+syn1 = h.ExpSyn(soma(0.5)
+syn1.tau = 1 * ms
 
-s= h.NetStim()
-s.number = 2
-s.start = 1
+s1= h.NetStim()
+s1.number = 1
+s1.start = 10 * ms
 
-nc = h.NetCon(s, syn)
-nc.delay = 2 * ms
-nc.weight[0] = 0.028
+con1= h.NetCon(s1, syn1)
+con1.delay = 0
+con1.weight[0] = 1
+
+syn2 = h.Exp2Syn(soma(0.5))
+syn2.tau1 = 1 * ms
+syn2.tau2 = 2 * ms
+syn2.e = 0
+
+s2= h.NetStim()
+s2.number = 1
+s2.start = 10 * ms
+
+con2 = h.NetCon(s2, syn2)
+con2.delay = 2 * ms
+con2.weight[0] = 0.432
 
 v = h.Vector().record(soma(0.5)._ref_v)          
 t = h.Vector().record(h._ref_t)   
